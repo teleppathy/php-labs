@@ -21,7 +21,7 @@
 ## Структура проєкту
 
 ```
-practicum03/
+php_lab3/
 ├── classes/
 │   ├── Article.php          # базовий клас статті
 │   ├── FeaturedArticle.php  # похідний клас (extends Article)
@@ -37,11 +37,11 @@ practicum03/
 
 ### Спосіб 1. Через вбудований сервер PHP
 
-1. Розпакувати архів і відкрити папку `practicum03` у VS Code.
+1. Розпакувати архів і відкрити папку `php_lab3` у VS Code.
 2. У терміналі перейти до папки проєкту:
 
 ```
-cd practicum03
+cd php_lab3
 ```
 
 3. Запустити локальний сервер PHP:
@@ -58,12 +58,12 @@ http://localhost:8000/index.php
 
 ### Спосіб 2. Через XAMPP (Apache)
 
-1. Скопіювати папку проєкту в каталог `htdocs` у папці XAMPP (наприклад, `<шлях до XAMPP>\htdocs\practicum03`).
+1. Скопіювати папку проєкту в каталог `htdocs` у папці XAMPP (наприклад, `<шлях до XAMPP>\htdocs\php_lab3`).
 2. Запустити `xampp-control.exe` і натиснути **Start** навпроти модуля **Apache**.
 3. Відкрити у браузері:
 
 ```
-http://localhost/practicum03/
+http://localhost/php_lab3/
 ```
 
 ## Висновок
