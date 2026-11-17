@@ -43,6 +43,7 @@ http://localhost:8000/index.php
 
 
 ### Спосіб 2. Через XAMPP (Apache)
+(скористалася саме цим способом)
 
 1. Скопіювати папку проєкту в каталог `htdocs` у папці XAMPP (наприклад, `<шлях до XAMPP>\htdocs\php_lab1`).
 2. Запустити `xampp-control.exe` і натиснути **Start** навпроти модуля **Apache**.
