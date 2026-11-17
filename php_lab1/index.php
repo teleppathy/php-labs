@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 // Крок 1: масив статей 
 $articles = [
     ['title' => 'Вступ до PHP для початківців',      'author' => 'Олена Коваленко', 'publishedAt' => '2026-09-05', 'views' => 245],
