@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e3e6ea;
+}
+
+th {
+    background: #2c3e50;
+    color: #fff;
+}
+
+tbody tr:hover {
+    background: #f0f4f8;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.badge-popular {
+    background: #ffe9b0;
+    color: #8a5a00;
+}
+
+.badge-normal {
+    background: #e3e6ea;
+    color: #444;
+}
+
+.summary {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: #fff;
+    border-left: 4px solid #2c3e50;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary h2 {
+    margin-top: 0;
+}
+.badge-featured {
+    background: #d6e9ff;
+    color: #0b4a8a;
+}
+
+h2.section-title {
+    margin: 32px 0 12px;
+}
+
+.slug {
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    color: #555;
+}
+
+.muted {
+    color: #666;
+    font-size: 14px;
+}
