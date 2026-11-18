@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Блог — API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Блог / CMS: власний API</h1>
+
+        <p class="muted">
+            Ця сторінка - простий клієнт для перевірки API (<code>api.php</code>).
+            Усі дані надходять і надсилаються через <code>fetch</code>; результат кожного запиту
+            (код статусу й JSON) видно в блоці «Відповідь API» внизу.
+        </p>
+
+        <!-- Контракт API -->
+        <h2 class="section-title">Маршрути API</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Метод</th>
+                    <th>Запит</th>
+                    <th>Опис</th>
+                    <th>Коди</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="method method-get">GET</span></td>
+                    <td><code>api.php?resource=articles</code></td>
+                    <td>Список статей</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td><span class="method method-get">GET</span></td>
+                    <td><code>api.php?resource=articles&amp;id=N</code></td>
+                    <td>Одна стаття</td>
+                    <td>200, 400, 404</td>
+                </tr>
+                <tr>
+                    <td><span class="method method-post">POST</span></td>
+                    <td><code>api.php?resource=articles</code></td>
+                    <td>Створення статті</td>
+                    <td>201, 400</td>
+                </tr>
+                <tr>
+                    <td><span class="method method-post">POST</span></td>
+                    <td><code>api.php?resource=articles&amp;action=publish&amp;id=N</code></td>
+                    <td>Опублікувати статтю (<code>published_at = NOW()</code>)</td>
+                    <td>200, 400, 404</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- GET: список -->
+        <h2 class="section-title">Статті (GET список)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Заголовок</th>
+                    <th>Автор</th>
+                    <th>Дата</th>
+                    <th>Дія</th>
+                </tr>
+            </thead>
+            <tbody id="results"></tbody>
+        </table>
+
+        <!-- GET: одна стаття за id -->
+        <h2 class="section-title">Отримати статтю за ID (GET одиничний запис)</h2>
+        <form id="get-form" class="form-inline">
+            <input type="number" id="get-id" min="1" placeholder="ID" required>
+            <button type="submit" class="btn">Отримати</button>
+            <button type="button" class="btn btn-light" id="get-bad">Спробувати 999999 (404)</button>
+        </form>
+
+        <!-- POST: створення -->
+        <h2 class="section-title">Створити статтю (POST)</h2>
+        <form id="add-form" class="form-box" novalidate>
+            <label for="title">Заголовок</label>
+            <input type="text" id="title" name="title">
+
+            <label for="content">Текст</label>
+            <textarea id="content" name="content" rows="3"></textarea>
+
+            <label for="author">Автор</label>
+            <input type="text" id="author" name="author">
+
+            <label for="published_at">Дата публікації (необов'язково)</label>
+            <input type="date" id="published_at" name="published_at">
+
+            <button type="submit" class="btn">Створити</button>
+        </form>
+        <p class="muted">
+            Валідацію в браузері вимкнено навмисно (<code>novalidate</code>): залиште поле порожнім,
+            щоб побачити відповідь <code>400 Bad Request</code> від API.
+        </p>
+
+        <!-- Відповідь API -->
+        <h2 class="section-title">Відповідь API</h2>
+        <pre class="api-log" id="log">Поки що запитів не було.</pre>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

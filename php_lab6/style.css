@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e3e6ea;
+}
+
+th {
+    background: #2c3e50;
+    color: #fff;
+}
+
+tbody tr:hover {
+    background: #f0f4f8;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.badge-popular {
+    background: #ffe9b0;
+    color: #8a5a00;
+}
+
+.badge-normal {
+    background: #e3e6ea;
+    color: #444;
+}
+
+.summary {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: #fff;
+    border-left: 4px solid #2c3e50;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary h2 {
+    margin-top: 0;
+}
+/* ---- Практична робота №6: клієнт для тестування API ---- */
+h2.section-title {
+    margin: 32px 0 12px;
+}
+
+.alert {
+    margin-bottom: 16px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background: #dff3e4;
+    color: #1e6b34;
+}
+
+.alert-error {
+    background: #fde2e2;
+    color: #9b1c1c;
+}
+
+.form-box {
+    padding: 16px 20px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-box label {
+    display: block;
+    margin: 10px 0 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cfd5db;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-inline {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-inline input {
+    max-width: 160px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #2c3e50;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-inline .btn {
+    margin-top: 0;
+}
+
+.btn:hover {
+    background: #3d566e;
+}
+
+.btn-sm {
+    margin-top: 0;
+    padding: 4px 10px;
+    font-size: 13px;
+}
+
+.btn-light {
+    background: #e3e6ea;
+    color: #333;
+}
+
+.btn-light:hover {
+    background: #d3d8de;
+}
+
+.muted {
+    color: #666;
+    font-size: 14px;
+}
+
+.state-row td {
+    text-align: center;
+    color: #666;
+    padding: 18px;
+}
+
+.state-row.error td {
+    color: #9b1c1c;
+    background: #fde2e2;
+}
+
+.method {
+    display: inline-block;
+    min-width: 46px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.method-get {
+    background: #d6e9ff;
+    color: #0b4a8a;
+}
+
+.method-post {
+    background: #dff3e4;
+    color: #1e6b34;
+}
+
+code {
+    font-family: Consolas, monospace;
+    font-size: 13px;
+}
+
+.api-log {
+    margin: 0;
+    padding: 14px 18px;
+    background: #1f2933;
+    color: #e4e7eb;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 320px;
+    overflow: auto;
+}
+
+.status-ok {
+    color: #7ee2a0;
+}
+
+.status-fail {
+    color: #ff9d9d;
+}
