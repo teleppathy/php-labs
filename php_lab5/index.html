@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Блог — AJAX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Блог / CMS: статті (AJAX + JSON)</h1>
+
+        <!-- Живий пошук за заголовком -->
+        <div class="toolbar">
+            <input type="search" id="search" placeholder="Пошук за заголовком…" autocomplete="off">
+            <span class="counter" id="counter"></span>
+        </div>
+
+        <!-- Контейнер для результатів: заповнюється з script.js -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Заголовок</th>
+                    <th>Автор</th>
+                    <th>Дата</th>
+                </tr>
+            </thead>
+            <tbody id="results"></tbody>
+        </table>
+
+        <!-- Додавання статті без перезавантаження -->
+        <h2 class="section-title">Опублікувати статтю</h2>
+        <div id="message"></div>
+        <form id="add-form" class="form-box">
+            <label for="title">Заголовок</label>
+            <input type="text" id="title" name="title" maxlength="255" required>
+
+            <label for="content">Текст</label>
+            <textarea id="content" name="content" rows="4" required></textarea>
+
+            <label for="author">Автор</label>
+            <input type="text" id="author" name="author" maxlength="100" required>
+
+            <label for="published_at">Дата публікації</label>
+            <input type="date" id="published_at" name="published_at" required>
+
+            <button type="submit" class="btn" id="submit-btn">Опублікувати</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
